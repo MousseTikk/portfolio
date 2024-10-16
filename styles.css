@@ -1,0 +1,148 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #111;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#presentation {
+    background-color: #111;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    text-align: center;
+}
+
+.intro p {
+    margin-bottom: 20px; 
+}
+
+.intro h1 span {
+    color: #00b4d8;
+}
+
+.btn {
+    margin-top: 30px; 
+    padding: 10px 20px;
+    background-color: #00b4d8;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0096c7;
+}
+
+/* Skills Section */
+#skills {
+    padding: 50px 0;
+    background-color: #222;
+}
+
+.skills-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.skills-carousel img {
+    width: auto; /* Changez de 100% à auto pour permettre à l'image d'avoir sa largeur réelle */
+    max-width: none; /* Retirez la limite maximale pour que l'image soit de sa taille réelle */
+    animation: scroll 20s linear infinite;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(-100%); /* Commence hors de la vue à gauche */
+    }
+    100% {
+        transform: translateX(100%); /* Se termine hors de la vue à droite */
+    }
+}
+
+/* Project Section */
+#projects {
+    padding: 50px 0;
+    background-color: #111;
+}
+
+.project-slider {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.project-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img.project-image {
+    width: 100%; /* Ajuste la largeur en fonction du conteneur */
+    max-width: 250px; /* Définir une largeur maximale pour l'image */
+    height: auto; /* Maintient le ratio d'aspect de l'image */
+    max-height: 10px; /* Limite la hauteur maximale de l'image */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    color: #00b4d8;
+    margin-bottom: 10px;
+}
+
+.project-link {
+    color: #00b4d8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tech-icons {
+    margin-top: 10px;
+}
+
+.tech-icon {
+    background-color: #222;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-right: 5px;
+    display: inline-block;
+}
