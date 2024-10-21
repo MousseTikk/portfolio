@@ -1,39 +1,67 @@
-const slider = document.querySelector('.project-slider');
-let isDown = false;
-let startX;
-let scrollLeft;
+// Dark mode toggle
+const toggle = document.getElementById('darkmode-toggle');
+const body = document.body;
+const toggleSwitch = document.querySelector("#darkmode-toggle");
 
-slider.addEventListener('mousedown', (e) => {
-  isDown = true;
-  slider.classList.add('active');
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-});
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute("data-theme", "dark");
+    body.classList.add('dark-mode');
+    localStorage.setItem("theme", "dark");
+  } else {
+    document.documentElement.setAttribute("data-theme", "light");
+    body.classList.remove('dark-mode');
+    localStorage.setItem("theme", "light");
+  }
+}
 
-slider.addEventListener('mouseleave', () => {
-  isDown = false;
-  slider.classList.remove('active');
-});
+toggleSwitch.addEventListener("change", switchTheme);
 
-slider.addEventListener('mouseup', () => {
-  isDown = false;
-  slider.classList.remove('active');
-});
+// Load previously saved theme
+const currentTheme = localStorage.getItem("theme")
+  ? localStorage.getItem("theme")
+  : null;
 
-slider.addEventListener('mousemove', (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 3; 
-  slider.scrollLeft = scrollLeft - walk;
-});
+if (currentTheme) {
+  document.documentElement.setAttribute("data-theme", currentTheme);
 
-const carousel = document.querySelector('.skills-carousel img');
+  if (currentTheme === "dark") {
+    toggleSwitch.checked = true;
+    body.classList.add('dark-mode');
+  }
+}
 
-carousel.addEventListener('mouseenter', () => {
-    carousel.style.animationPlayState = 'paused';
-});
+// Automatic slider for the logos section
+const logosSlide = document.querySelector('.logos-slide');
+const logosWrapper = document.querySelector('.logos-wrapper');
+let clone = logosSlide.cloneNode(true);
+logosWrapper.appendChild(clone);
 
-carousel.addEventListener('mouseleave', () => {
-    carousel.style.animationPlayState = 'running';
-});
+// Fonction pour changer les icônes en fonction du thème
+function switchIcons(theme) {
+  const images = document.querySelectorAll('.logos-slide img');
+  images.forEach((img) => {
+    if (img.src.includes('-Dark.svg') || img.src.includes('-Light.svg')) {
+      img.src = img.src.replace(theme === 'dark' ? '-Light' : '-Dark', theme === 'dark' ? '-Dark' : '-Light');
+    }
+  });
+}
+
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute("data-theme", "dark");
+    body.classList.add('dark-mode');
+    localStorage.setItem("theme", "dark");
+    switchIcons("dark");
+  } else {
+    document.documentElement.setAttribute("data-theme", "light");
+    body.classList.remove('dark-mode');
+    localStorage.setItem("theme", "light");
+    switchIcons("light");
+  }
+}
+
+// Appeler switchIcons lors du chargement de la page
+if (currentTheme) {
+  switchIcons(currentTheme);
+}

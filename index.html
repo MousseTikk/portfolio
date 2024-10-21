@@ -1,93 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Colin Dusart</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colin Dusart</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Section header -->
+    <header>      
+      <div class="header-right">
+        <div class="darkmode-toggle">
+          <input type="checkbox" id="darkmode-toggle" />
+          <label for="darkmode-toggle">
+            <svg class="moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M3.39703 11.6315C3.39703 16.602 7.42647 20.6315 12.397 20.6315C15.6858 20.6315 18.5656 18.8664 20.1358 16.23C16.7285 17.3289 12.6922 16.7548 9.98282 14.0455C7.25201 11.3146 6.72603 7.28415 7.86703 3.89293C5.20697 5.47927 3.39703 8.38932 3.39703 11.6315ZM21.187 13.5851C22.0125 13.1021 23.255 13.6488 23 14.5706C21.7144 19.2187 17.4543 22.6315 12.397 22.6315C6.3219 22.6315 1.39703 17.7066 1.39703 11.6315C1.39703 6.58874 4.93533 2.25845 9.61528 0.999986C10.5393 0.751502 11.0645 1.99378 10.5641 2.80935C8.70026 5.84656 8.83194 10.0661 11.397 12.6312C13.9319 15.1662 18.1365 15.3702 21.187 13.5851Z" fill="#0F0F0F"/>
+            </svg>
+            <svg class="sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7.5C9.51472 7.5 7.5 9.51472 7.5 12C7.5 14.4853 9.51472 16.5 12 16.5C14.4853 16.5 16.5 14.4853 16.5 12C16.5 9.51472 14.4853 7.5 12 7.5ZM6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18C8.68629 18 6 15.3137 6 12Z" fill="#fff"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 3V5.25H11.25V3H12.75Z" fill="#fff"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M21 12.75L18.75 12.75L18.75 11.25L21 11.25L21 12.75Z" fill="#fff"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M18.8943 6.16637L17.3033 7.75736L16.2426 6.6967L17.8336 5.10571L18.8943 6.16637Z" fill="#fff"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8336 18.8944L16.2426 17.3034L17.3033 16.2428L18.8943 17.8337L17.8336 18.8944Z" fill="#fff"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 18.75V21H11.25V18.75H12.75Z" fill="#fff"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.25 12.75L3 12.75L3 11.25L5.25 11.25L5.25 12.75Z" fill="#fff"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75732 17.3033L6.16633 18.8943L5.10567 17.8337L6.69666 16.2427L7.75732 17.3033Z" fill="#fff"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.69666 7.75744L5.10567 6.16645L6.16633 5.10579L7.75732 6.69678L6.69666 7.75744Z" fill="#fff"/>
+            </svg>
+          </label>
+        </div>
+      </div>
+    </header>
+
     <!-- Section Présentation -->
     <section id="presentation">
-        <div class="intro">
-            <h1>Hello, it's <span>Colin Dusart</span></h1>
-            <p>I'm a Software Developer based in Belgium, studying at HE2B and currently in my 3rd year of Computer Science.</p>
-            <a href="cv\CV_COLIN_EN.pdf" class="btn">Download CV</a>
-        </div>
+      <div class="intro">
+        <h1>Hello, it's <span>Colin Dusart</span></h1>
+        <p>I'm a Software Developer based in Belgium, studying at HE2B and currently in my 3rd year of Computer Science.</p>
+        <a href="cv/CV_COLIN_EN.pdf" class="btn">Download CV</a>
+      </div>
     </section>
 
-    <!-- Section Compétences -->
-    <section id="skills">
-        <h2>Frameworks and Skills</h2>
-        <div class="skills-carousel">
-            <img src="https://skillicons.dev/icons?i=java,html,css,js,cpp,c,kotlin,git,arduino,laravel,sqlite,qt,react,androidstudio,vscode" alt="Skills">
+    <!-- Section Frameworks and Skills -->
+    <section id="skills" class="section-background">
+      <h2>Frameworks and Skills</h2>
+      <div class="logos">
+        <div class="logos-wrapper">
+          <div class="logos-slide">
+            <img src="./logos/Java-Dark.svg" alt="Java" />
+            <img src="./logos/HTML.svg" alt="HTML" />
+            <img src="./logos/CSS.svg" alt="CSS" />
+            <img src="./logos/JavaScript.svg" alt="JavaScript" />
+            <img src="./logos/CPP.svg" alt="C++" />
+            <img src="./logos/C.svg" alt="C" />
+            <img src="./logos/Kotlin-Dark.svg" alt="Kotlin" />
+            <img src="./logos/Git.svg" alt="Git" />
+            <img src="./logos/Arduino.svg" alt="Arduino" />
+            <img src="./logos/Laravel-Dark.svg" alt="Laravel" />
+            <img src="./logos/SQLite.svg" alt="SQLite" />
+            <img src="./logos/QT-Dark.svg" alt="QT" />
+            <img src="./logos/React-Dark.svg" alt="React" />
+            <img src="./logos/AndroidStudio-Dark.svg" alt="Android Studio" />
+            <img src="./logos/VSCode-Dark.svg" alt="VS Code" />
+            <dmg src="./logos/PHP-Dark.svg" alt="PHP" />
+            <img src="./logos/Python-Dark.svg" alt="Python" />
+            <img src="./logos/Django.svg" alt="Django" />
+            <img src="./logos/Github-Dark.svg" alt="GitHub" />
+            <img src="./logos/Idea-Dark.svg" alt="IntelliJ IDEA" />
+            <img src="./logos/Spring-Dark.svg" alt="Spring" />
+            <img src="./logos/Npm-Dark.svg" alt="Npm" />
+          </div>
         </div>
+      </div>
     </section>
-    <!-- Section Projets -->
-    <section id="projects">
-        <h2>Main Projects</h2>
-        <div class="project-slider">
-            <!-- Project 1: Lego Collection -->
-            <div class="project-card">
-                <h3>Lego Collection</h3>
-                <p>Application to manage and track your Lego sets collection, allowing you to view all sets you own in one place.</p>
-                <a href="https://github.com/MousseTikk/LegoCollec" class="project-link">GitHub</a>
-                <div class="tech-icons">
-                    <span class="tech-icon">Kotlin</span>
-                    <span class="tech-icon">Android</span>
-                </div>
-            </div>
-            <!-- Project 2: Odoo-->
-            <div class="project-card">
-                <h3>Odoo ESI Lecture Module</h3>
-                <p>Module developed under Odoo to manage readings and monitoring of books at ESI. This project includes the management of students, books, and loans, all integrated into a complete ERP.</p>
-                <a href="https://github.com/MousseTikk/ESI_Lecture" class="project-link">GitHub</a>
-                <div class="tech-icons">
-                    <span class="tech-icon">Odoo</span>
-                    <span class="tech-icon">Docker</span>
-                    <span class="tech-icon">Django</span>
-                </div>
-            </div>
-            <!-- Project 3: BMR-->
-            <div class="project-card">
-                <h3>BMR Calculator Application</h3>
-                <p>This application calculates the Basal Metabolic Rate (BMR) based on user inputs like weight, height, age, and gender. It also estimates daily caloric needs by considering the individual's activity level.</p>
-                <a href="https://github.com/MousseTikk/BMR" class="project-link">GitHub</a>
-                <div class="tech-icons">
-                    <span class="tech-icon">Java</span>
-                    <span class="tech-icon">JavaFX</span>
-                </div>
-            </div>
-            <!-- Project 4: Asciipaint-->
-            <div class="project-card">
-                <h3>AsciiPaint</h3>
-                <p>This application allows users to create and display various geometric shapes in the console. It provides an interactive experience for users to visualize shapes using ASCII characters.</p>                <a href="https://github.com/MousseTikk/Asciipaint" class="project-link">GitHub</a>
-                <div class="tech-icons">
-                    <span class="tech-icon">Java</span>
-                    <span class="tech-icon">Console Application</span>
-                </div>
-            </div>
-        <!-- Project 5: Turing Machine -->
-        <div class="project-card">
-            <h3>Turing Machine Simulator</h3>
-            <p>This application recreates the Turing Machine board game under a graphical interface.</p>
-            <a href="https://github.com/MousseTikk/TuringMachine-Game" class="project-link">GitHub</a>
-            <div class="tech-icons">
-                <span class="tech-icon">Java</span>
-                <span class="tech-icon">JavaFX</span>
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer style="background-color: #222; padding: 20px; text-align: center;">
-        <p>
-            <a href="https://www.linkedin.com/in/colin-dusart-015707331/" style="color: #00b4d8; margin: 0 15px;">LinkedIn</a>
-            <a href="https://github.com/MousseTikk" style="color: #00b4d8; margin: 0 15px;">GitHub</a>
-            <span style="color: white;">cdusart@etu.he2b.be</span>
-        </p>
+
+        <!-- Section Projets -->
+        <section id="projects" class="section-background">
+          <h2>Main Projects</h2>
+          <div class="project-slider">
+                <!-- Project 1: Lego Collection -->
+                <div class="project-card">
+                  <h3>Lego Collection</h3>
+                  <p>Application to manage and track your Lego sets collection, allowing you to view all sets you own in one place.</p>
+                  <a href="https://github.com/MousseTikk/LegoCollec" class="project-link">GitHub</a>
+                  <div class="tech-icons">
+                      <span class="tech-icon">Kotlin</span>
+                      <span class="tech-icon">Android</span>
+                  </div>
+              </div>
+              <!-- Project 2: Odoo-->
+              <div class="project-card">
+                  <h3>Odoo ESI Lecture Module</h3>
+                  <p>Module developed under Odoo to manage readings and monitoring of books at ESI. This project includes the management of students, books, and loans, all integrated into a complete ERP.</p>
+                  <a href="https://github.com/MousseTikk/ESI_Lecture" class="project-link">GitHub</a>
+                  <div class="tech-icons">
+                      <span class="tech-icon">Odoo</span>
+                      <span class="tech-icon">Docker</span>
+                      <span class="tech-icon">Django</span>
+                      <span class="tech-icon">Python</span>
+                  </div>
+              </div>
+              <!-- Project 3: BMR-->
+              <div class="project-card">
+                  <h3>BMR Calculator Application</h3>
+                  <p>This application calculates the Basal Metabolic Rate (BMR) based on user inputs like weight, height, age, and gender. It also estimates daily caloric needs by considering the individual's activity level.</p>
+                  <a href="https://github.com/MousseTikk/BMR" class="project-link">GitHub</a>
+                  <div class="tech-icons">
+                      <span class="tech-icon">Java</span>
+                      <span class="tech-icon">JavaFX</span>
+                  </div>
+              </div>
+              <!-- Project 4: Asciipaint-->
+              <div class="project-card">
+                  <h3>AsciiPaint</h3>
+                  <p>This application allows users to create and display various geometric shapes in the console. It provides an interactive experience for users to visualize shapes using ASCII characters.</p>
+                  <a href="https://github.com/MousseTikk/Asciipaint" class="project-link">GitHub</a>
+                  <div class="tech-icons">
+                      <span class="tech-icon">Java</span>
+                      <span class="tech-icon">Console Application</span>
+                  </div>
+              </div>
+          <!-- Project 5: Turing Machine -->
+          <div class="project-card">
+              <h3>Turing Machine Simulator</h3>
+              <p>This application recreates the Turing Machine board game under a graphical interface.</p>
+              <a href="https://github.com/MousseTikk/TuringMachine-Game" class="project-link">GitHub</a>
+              <div class="tech-icons">
+                  <span class="tech-icon">Java</span>
+                  <span class="tech-icon">JavaFX</span>
+              </div>
+          </div>
+        </section>
+    
+        
+
+    <!-- Footer avec les liens -->
+    <footer>
+      <div class="footer-links">
+        <a href="linkedin.com/in/colin-dusart">LinkedIn</a>
+        <span>cdusart@etu.he2b.be</span>
+        <a href="github.com/MousseTikk">GitHub</a>
+      </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
-</body>
+    <!-- JS -->
+    <script src="script.js">
+    </script>
+  </body>
 </html>
